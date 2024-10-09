@@ -18,7 +18,11 @@ import (
 var sccmlocation = `SOFTWARE\Microsoft\SMS`
 
 func main() {
-	Enumerate()
+	err := Enumerate()
+	if err != nil {
+		fmt.Println("[-] Error: " + err.Error())
+		return
+	}
 }
 
 func Enumerate() error {
