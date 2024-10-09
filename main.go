@@ -147,7 +147,7 @@ func EnumerateDP(reg *msrrp.RPCCon) error {
 	if err != nil {
 		return err
 	}
-	sc, err := reg.QueryValueString(hSubKey, "Site Code")
+	sc, err := reg.QueryValueString(hSubKey, "SiteCode")
 	if err != nil {
 		return err
 	}
